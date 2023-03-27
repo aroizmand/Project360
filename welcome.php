@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
 // Connect to the database
-$conn = mysqli_connect("localhost", "root", "", "recipebook");
+$conn = mysqli_connect("cosc360.ok.ubc.ca", "71867832", "a123d1234", "db_71867832");
 
 // Select all the posts from the "posts" table
 $sql = "SELECT * FROM posts ORDER BY created_at DESC";

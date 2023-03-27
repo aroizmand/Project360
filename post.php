@@ -1,7 +1,7 @@
 <?php
 
 // Connect to the database
-$conn = mysqli_connect("localhost", "root", "", "recipebook");
+$conn = mysqli_connect("cosc360.ok.ubc.ca", "71867832", "a123d1234", "db_71867832");
 
 // If the user clicks the "Add Post" button
 if (isset($_POST['add_post'])) {

@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "recipebook");
+$conn = mysqli_connect("cosc360.ok.ubc.ca", "71867832", "a123d1234", "db_71867832");
 
 if(isset($_GET['search'])) {
   $search = mysqli_real_escape_string($conn, $_GET['search']);
