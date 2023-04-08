@@ -1,25 +1,28 @@
 <?php
 
 // Connect to the database
-$conn = mysqli_connect("cosc360.ok.ubc.ca", "71867832", "a123d1234", "db_71867832");
+require_once "config.php";
+
+session_start();
 
 // If the user clicks the "Add Post" button
 if (isset($_POST['add_post'])) {
-  $title = $_POST['title'];
-  $content = $_POST['content'];
-  $author = $_POST['author'];
+  $title = mysqli_real_escape_string($link, $_POST['title']);
+  $content = mysqli_real_escape_string($link, $_POST['content']);
+  $username = $_SESSION['username'];
 
   // Insert the post into the "posts" table
-  $sql = "INSERT INTO posts (title, content, author, created_at) 
-          VALUES ('$title', '$content', '$author', NOW())";
+  $sql = "INSERT INTO posts (title, content, created_at,username) 
+          VALUES ('$title', '$content', NOW(),'$username')";
 
-  if (mysqli_query($conn, $sql)) {
+  if (mysqli_query($link, $sql)) {
     // Redirect to the main page
     header("Location: welcome.php");
     exit();
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
+  
 }
 
 ?>
@@ -27,25 +30,33 @@ if (isset($_POST['add_post'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="post.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style_viewpost.css" />
+  <title>Add Post</title>
 </head>
 <body>
-<h2>Add Post</h2>
-<form method="post" action="">
-  <label>Title:</label>
-  <input type="text" name="title" required><br>
-
-  <label>Recipe:</label>
-  <textarea name="content" required></textarea><br>
-
-  <label>First Name:</label>
-  <input type="text" name="author" required><br>
-
-  <input type="submit" name="add_post" value="Add Post">
-</form>
+  <header class="header">
+    <h1>Add Post</h1>
+    <ul>
+      <li><a href="welcome.php">Welcome</a></li>
+      <li><a href="user_profile.php">Profile</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <form method="post" action="">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required>
+      </div>
+      <div class="form-group">
+        <label for="content">Recipe:</label>
+        <textarea name="content" id="content" required></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" name="add_post" value="Add Post">
+      </div>
+    </form>
+  </div>
 </body>
 </html>
