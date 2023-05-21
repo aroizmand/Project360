@@ -5,9 +5,9 @@ project-aroizmand created by GitHub Classroom
 Alexander Roizman		71867832
 Muhammad Danial Asif 	64792633
 
-The MyBlogPost project we will develop is a platform that gives you the opportunity to share your thoughts and ideas with the world through blogging. 
+MyBlogPost is a platform that gives you the opportunity to share your recipes with the world through blogging. 
 This website is designed for both registered and unregistered users. 
-From one side, registered users will have the ability to create and publish their own blogs, while unregistered users are limited to viewing only. 
+From one side, registered users will have the ability to create and publish their own recipes, while unregistered users are limited to viewing only. 
 The main objective of the project is to make a user-friendly website, in which user registration, blog post creation, and commenting are easy and accessible to everyone. 
 The platform will be built to support multiple users and provide real-time updates on comments. Nevertheless, unregistered users will only be able to view posts.
 
