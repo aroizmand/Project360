@@ -1,9 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/enf2qyfT)
-# MyBlogPost - Recipe blogging
-project-aroizmand created by GitHub Classroom
-
-Alexander Roizman		71867832
-Muhammad Danial Asif 	64792633
 
 MyBlogPost is a platform that gives you the opportunity to share your recipes with the world through blogging. 
 This website is designed for both registered and unregistered users. 
