@@ -1,5 +1,5 @@
 
-MyBlogPost is a platform that gives you the opportunity to share your recipes with the world through blogging. 
+World Recipes is a platform that gives you the opportunity to share your recipes with the world through blogging. 
 This website is designed for both registered and unregistered users. 
 From one side, registered users will have the ability to create and publish their own recipes, while unregistered users are limited to viewing only. 
 The main objective of the project is to make a user-friendly website, in which user registration, blog post creation, and commenting are easy and accessible to everyone. 
